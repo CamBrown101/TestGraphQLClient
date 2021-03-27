@@ -1,15 +1,19 @@
 .one {
-  width: 500px;
+  width: 100%;
   height: 500px;
   background-color: red;
 }
 .two {
-  width: 500px;
+  width: 100%;
   height: 500px;
   background-color: blue;
 }
 .three {
-  width: 500px;
+  width: 100%;
   height: 500px;
   background-color: green;
+}
+
+.carousel-container {
+  background-color: black;
 }
