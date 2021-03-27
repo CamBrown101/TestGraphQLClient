@@ -9,7 +9,8 @@ const CarouselTest = () => {
       interval={2000}
       autoPlay={true}
       centerMode={true}
-      infiniteLoop={true}>
+      infiniteLoop={true}
+      showIndicators={false}>
       <div className="one"></div>
       <div className="two"></div>
       <div className="three"></div>
