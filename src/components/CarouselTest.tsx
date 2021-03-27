@@ -6,7 +6,7 @@ import { Carousel } from 'react-responsive-carousel';
 const CarouselTest = () => {
   return (
     <Carousel
-      interval={2000}
+      interval={10000}
       autoPlay={true}
       centerMode={true}
       infiniteLoop={true}
