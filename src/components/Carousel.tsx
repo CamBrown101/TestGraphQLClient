@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Carousel.scss';
+import styled from 'styled-components';
 
 type Props = {
   interval: number;
@@ -32,10 +33,15 @@ const Carousel = ({ interval, numberOfSlides }: Props) => {
   return (
     <div className="carasouel-container">
       <p>{slide}</p>
-      <button onClick={() => previousSlide()}> last </button>
-      <button onClick={() => nextSlide()}> next </button>
+      <Buttons onClick={() => previousSlide()}> last </Buttons>
+      <Buttons onClick={() => nextSlide()}> next </Buttons>
     </div>
   );
 };
 
 export default Carousel;
+
+const Buttons = styled.button`
+  color: red;
+  background-color: black;
+`;
