@@ -12,6 +12,10 @@ const Carousel = ({ interval }: Props) => {
     setSlide(slide + 1);
   };
 
+  const previousSlide = () => {
+    setSlide(slide - 1);
+  };
+
   useEffect(() => {
     const timer = setTimeout(() => {
       nextSlide();
@@ -22,6 +26,7 @@ const Carousel = ({ interval }: Props) => {
   return (
     <div>
       <p>{slide}</p>
+      <button onClick={() => previousSlide()}> last </button>
       <button onClick={() => nextSlide()}> next </button>
     </div>
   );
