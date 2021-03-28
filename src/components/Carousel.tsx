@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 type Props = {
   interval: number;
@@ -6,17 +6,19 @@ type Props = {
 
 const Carousel = ({ interval }: Props) => {
   const [slide, setSlide] = useState(0);
+  console.log(slide);
+
   const nextSlide = () => {
-    let slideCopy = slide;
-    setSlide(slideCopy + 1);
+    setSlide(slide + 1);
   };
 
-  console.log(interval);
-  const slideTimer = (interval: number) => {
-    const nxtSlide = setInterval(() => nextSlide(), interval);
-  };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      nextSlide();
+    }, interval);
+    return () => clearTimeout(timer);
+  });
 
-  slideTimer(interval);
   return (
     <div>
       <p>{slide}</p>
