@@ -5,9 +5,10 @@ import styled from 'styled-components';
 type Props = {
   interval: number;
   numberOfSlides: number;
+  backgroundColor: string;
 };
 
-const Carousel = ({ interval, numberOfSlides }: Props) => {
+const Carousel = ({ interval, numberOfSlides, backgroundColor }: Props) => {
   const [slide, setSlide] = useState(0);
   console.log(slide);
 
@@ -44,4 +45,8 @@ export default Carousel;
 const Buttons = styled.button`
   color: red;
   background-color: black;
+`;
+
+const CarouselContainer = styled.div`
+  background-color: ${backgroundColor};
 `;
