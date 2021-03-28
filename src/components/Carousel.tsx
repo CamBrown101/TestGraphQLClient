@@ -10,7 +10,11 @@ const Carousel = ({ interval, numberOfSlides }: Props) => {
   console.log(slide);
 
   const nextSlide = () => {
-    setSlide(slide + 1);
+    if (slide + 1 === numberOfSlides) {
+      setSlide(0);
+    } else {
+      setSlide(slide + 1);
+    }
   };
 
   const previousSlide = () => {
