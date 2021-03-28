@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Carousel.scss';
 
 type Props = {
   interval: number;
@@ -29,7 +30,7 @@ const Carousel = ({ interval, numberOfSlides }: Props) => {
   });
 
   return (
-    <div>
+    <div className="carasouel-container">
       <p>{slide}</p>
       <button onClick={() => previousSlide()}> last </button>
       <button onClick={() => nextSlide()}> next </button>
