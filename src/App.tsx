@@ -6,8 +6,7 @@ import Carasouel from './components/Carousel';
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
-      <Carasouel interval={5000} />
+      <Carasouel interval={5000} numberOfSlides={5} />
     </div>
   );
 }

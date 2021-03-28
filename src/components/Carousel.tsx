@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 
 type Props = {
   interval: number;
+  numberOfSlides: number;
 };
 
-const Carousel = ({ interval }: Props) => {
+const Carousel = ({ interval, numberOfSlides }: Props) => {
   const [slide, setSlide] = useState(0);
   console.log(slide);
 
