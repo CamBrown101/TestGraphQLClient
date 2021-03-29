@@ -35,18 +35,26 @@ const Carousel = ({ interval, numberOfSlides, backgroundColor }: Props) => {
     <div className="carasouel-container">
       <p>{slide}</p>
       <Buttons onClick={() => previousSlide()}> last </Buttons>
-      <Buttons onClick={() => nextSlide()}> next </Buttons>
+      <Buttons primary="white" onClick={() => nextSlide()}>
+        {' '}
+        next{' '}
+      </Buttons>
     </div>
   );
 };
 
-export default Carousel;
+type ButtonsProps = {
+  primary?: string;
+};
 
-const Buttons = styled.button`
+const Buttons = styled.button<ButtonsProps>`
   color: red;
-  background-color: black;
+  background-color: ${(props) =>
+    props.primary === 'white' ? 'white' : 'black'};
 `;
 
-const CarouselContainer = styled.div`
-  background-color: ${backgroundColor};
-`;
+// const CarouselContainer = styled.div`
+//   background-color: ${backgroundColor};
+// `;
+
+export default Carousel;
