@@ -43,6 +43,7 @@ const Carousel = ({ interval, numberOfSlides, backgroundColor }: Props) => {
   );
 };
 
+//Styled Components
 type ButtonsProps = {
   primary?: string;
 };
