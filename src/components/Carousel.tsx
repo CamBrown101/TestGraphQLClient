@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee, faCircle } from '@fortawesome/free-solid-svg-icons';
 
 type Props = {
   interval: number;
@@ -35,8 +33,6 @@ const Carousel = ({ interval, numberOfSlides, backgroundColor }: Props) => {
   return (
     <Wrapper>
       <p>{slide}</p>
-      <FontAwesomeIcon className="circle" icon={faCircle} />
-
       <Buttons onClick={() => previousSlide()}>last</Buttons>
       <Buttons primary="white" onClick={() => nextSlide()}>
         next
