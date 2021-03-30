@@ -31,13 +31,19 @@ const Carousel = ({ interval, numberOfSlides, backgroundColor }: Props) => {
   });
 
   return (
-    <Wrapper>
+    <div>
       <p>{slide}</p>
+      <div>
+        <Circle />
+        <Circle />
+        <Circle />
+        <SelectedCircle />
+      </div>
       <Buttons onClick={() => previousSlide()}>last</Buttons>
       <Buttons primary="white" onClick={() => nextSlide()}>
         next
       </Buttons>
-    </Wrapper>
+    </div>
   );
 };
 
@@ -51,11 +57,20 @@ const Buttons = styled.button<ButtonsProps>`
   background-color: ${(props) =>
     props.primary === 'white' ? 'white' : 'black'};
 `;
-const Wrapper = styled.div`
-  .circle {
-    color: red;
-    font-size: 200px;
-  }
+const Circle = styled.div`
+  width: 20px;
+  height: 20px;
+  background-color: rgba(ffff, 1);
+  border: black solid 2px;
+  border-radius: 100px;
+`;
+
+const SelectedCircle = styled.div`
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border: black solid 2px;
+  border-radius: 100px;
 `;
 // const CarouselContainer = styled.div`
 //   background-color: ${backgroundColor};
