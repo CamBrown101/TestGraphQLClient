@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './Carousel.scss';
 import styled from 'styled-components';
 
 type Props = {
@@ -34,10 +33,9 @@ const Carousel = ({ interval, numberOfSlides, backgroundColor }: Props) => {
   return (
     <div className="carasouel-container">
       <p>{slide}</p>
-      <Buttons onClick={() => previousSlide()}> last </Buttons>
+      <Buttons onClick={() => previousSlide()}>last</Buttons>
       <Buttons primary="white" onClick={() => nextSlide()}>
-        {' '}
-        next{' '}
+        next
       </Buttons>
     </div>
   );
