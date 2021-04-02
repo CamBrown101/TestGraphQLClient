@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 
-import Carasouel from './components/Carousel';
+import Carasouel from './components/Carousel/Carousel';
 
 function App() {
   return (
