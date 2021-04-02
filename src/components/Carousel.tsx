@@ -31,13 +31,21 @@ const Carousel = ({ interval, numberOfSlides }: Props) => {
     return () => clearTimeout(timer);
   });
 
+  const circles = (numberOfSlides: number) => {
+    const arrayOfCircles = [
+      <Circle className="circle" />,
+      <CircleFill className="circle-fill" />,
+      <CircleFill className="circle-fill" />,
+      <CircleFill className="circle-fill" />,
+      <CircleFill className="circle-fill" />,
+    ];
+    return arrayOfCircles;
+  };
+
   return (
     <CarouselContainer>
       <p>{slide}</p>
-      <div className="circle-container">
-        <Circle className="circle" />
-        <CircleFill className="circle-fill" />
-      </div>
+      <div className="circle-container">{circles(5)}</div>
       <Buttons onClick={() => previousSlide()}>last</Buttons>
       <Buttons primary="white" onClick={() => nextSlide()}>
         next
