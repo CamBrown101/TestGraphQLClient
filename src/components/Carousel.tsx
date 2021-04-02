@@ -35,7 +35,7 @@ const Carousel = ({ interval, numberOfSlides, backgroundColor }: Props) => {
   return (
     <CarouselContainer>
       <p>{slide}</p>
-      <div>
+      <div className="circle-container">
         <Circle className="circle" />
         <CircleFill className="circle-fill" />
       </div>
@@ -64,6 +64,11 @@ const CarouselContainer = styled.div`
   }
   .circle-fill {
     width: 20px;
+  }
+  .circle-container {
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: center;
   }
 `;
 
