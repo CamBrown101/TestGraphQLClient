@@ -9,12 +9,13 @@ type Props = {
 };
 
 const Carousel = ({ interval, numberOfSlides }: Props) => {
-  const [slide, setSlide] = useState(0);
+  const [slide, setSlide] = useState(1);
   console.log(slide);
+  console.log(numberOfSlides);
 
   const nextSlide = () => {
-    if (slide + 1 === numberOfSlides) {
-      setSlide(0);
+    if (slide + 1 === numberOfSlides + 1) {
+      setSlide(1);
     } else {
       setSlide(slide + 1);
     }
