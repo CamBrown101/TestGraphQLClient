@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { Circle } from '@styled-icons/bootstrap/Circle';
+import { CircleFill } from '@styled-icons/bootstrap/CircleFill';
 
 type Props = {
   interval: number;
@@ -31,19 +33,17 @@ const Carousel = ({ interval, numberOfSlides, backgroundColor }: Props) => {
   });
 
   return (
-    <div>
+    <CarouselContainer>
       <p>{slide}</p>
       <div>
-        <Circle />
-        <Circle />
-        <Circle />
-        <SelectedCircle />
+        <Circle className="circle" />
+        <CircleFill className="circle-fill" />
       </div>
       <Buttons onClick={() => previousSlide()}>last</Buttons>
       <Buttons primary="white" onClick={() => nextSlide()}>
         next
       </Buttons>
-    </div>
+    </CarouselContainer>
   );
 };
 
@@ -57,23 +57,14 @@ const Buttons = styled.button<ButtonsProps>`
   background-color: ${(props) =>
     props.primary === 'white' ? 'white' : 'black'};
 `;
-const Circle = styled.div`
-  width: 20px;
-  height: 20px;
-  background-color: rgba(ffff, 1);
-  border: black solid 2px;
-  border-radius: 100px;
-`;
 
-const SelectedCircle = styled.div`
-  width: 20px;
-  height: 20px;
-  background-color: black;
-  border: black solid 2px;
-  border-radius: 100px;
+const CarouselContainer = styled.div`
+  .circle {
+    width: 20px;
+  }
+  .circle-fill {
+    width: 20px;
+  }
 `;
-// const CarouselContainer = styled.div`
-//   background-color: ${backgroundColor};
-// `;
 
 export default Carousel;
