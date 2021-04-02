@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import CarouselSlide from './CarouselSlide';
 import styled from 'styled-components';
 import { Circle } from '@styled-icons/bootstrap/Circle';
 import { CircleFill } from '@styled-icons/bootstrap/CircleFill';
@@ -51,6 +52,7 @@ const Carousel = ({ interval, numberOfSlides }: Props) => {
   return (
     <CarouselContainer>
       <p>{slide}</p>
+      <CarouselSlide color="pink" />
       <div className="circle-container">
         {createCircles(numberOfSlides, slide)}
       </div>
