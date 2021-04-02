@@ -1,9 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export const CarouselSlide = () => {
+type Props = {
+  color: string;
+};
+
+const CarouselSlide = ({ color }: Props) => {
   return (
-    <SlideWrapper>
+    <SlideWrapper color={color}>
       <div className="slideBackground"></div>
     </SlideWrapper>
   );
@@ -11,18 +15,14 @@ export const CarouselSlide = () => {
 
 //Styled Component
 
-type ButtonsProps = {
-  primary?: string;
+type SlideProps = {
+  color?: string;
 };
 
-const Buttons = styled.button<ButtonsProps>`
-  color: red;
-  background-color: ${(props) =>
-    props.primary === 'white' ? 'white' : 'black'};
+const SlideWrapper = styled.div<SlideProps>`
+  background-color: ${(props) => {
+    return props.color;
+  }};
 `;
-const SlideWrapper = styled.div`
-  width: 100%;
-  .slideBackground {
-    background-color: ;
-  }
-`;
+
+export default CarouselSlide;
