@@ -23,6 +23,8 @@ const SlideWrapper = styled.div<SlideProps>`
   background-color: ${(props) => {
     return props.color;
   }};
+  height: 300px;
+  width: 100%;
 `;
 
 export default CarouselSlide;
