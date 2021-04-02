@@ -37,11 +37,11 @@ const Carousel = ({ interval, numberOfSlides }: Props) => {
   });
 
   const slidesArray = [
-    <CarouselSlide color="pink" />,
-    <CarouselSlide color="red" />,
-    <CarouselSlide color="blue" />,
-    <CarouselSlide color="green" />,
-    <CarouselSlide color="black" />,
+    <CarouselSlide slide={slide} color="pink" />,
+    <CarouselSlide slide={slide} color="red" />,
+    <CarouselSlide slide={slide} color="blue" />,
+    <CarouselSlide slide={slide} color="green" />,
+    <CarouselSlide slide={slide} color="black" />,
   ];
 
   const createCircles = (numberOfSlides: number, slideNumber: number) => {

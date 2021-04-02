@@ -3,12 +3,13 @@ import styled from 'styled-components';
 
 type Props = {
   color: string;
+  slide: number;
 };
 
-const CarouselSlide = ({ color }: Props) => {
+const CarouselSlide = ({ color, slide }: Props) => {
   return (
     <SlideWrapper color={color}>
-      <div className="slideBackground"></div>
+      <div className="slideBackground">{slide}</div>
     </SlideWrapper>
   );
 };
