@@ -11,7 +11,6 @@ type Props = {
 const Carousel = ({ interval, numberOfSlides }: Props) => {
   const [slide, setSlide] = useState(1);
   console.log(slide);
-  console.log(numberOfSlides);
 
   const nextSlide = () => {
     if (slide + 1 === numberOfSlides + 1) {
@@ -22,7 +21,11 @@ const Carousel = ({ interval, numberOfSlides }: Props) => {
   };
 
   const previousSlide = () => {
-    setSlide(slide - 1);
+    if (slide - 1 === 0) {
+      setSlide(numberOfSlides);
+    } else {
+      setSlide(slide - 1);
+    }
   };
 
   useEffect(() => {
@@ -35,16 +38,13 @@ const Carousel = ({ interval, numberOfSlides }: Props) => {
   const createCircles = (numberOfSlides: number, slideNumber: number) => {
     const arrayOfCircles: any[] = [];
 
-    for (let i = 1; i < numberOfSlides; i++) {
+    for (let i = 1; i <= numberOfSlides; i++) {
       if (i === slideNumber) {
-        arrayOfCircles.push(<CircleFill className="circle-fill" />);
+        arrayOfCircles.push(<CircleFill className="circle-fill" key={i} />);
       } else {
-        arrayOfCircles.push(<Circle className="circle" />);
+        arrayOfCircles.push(<Circle className="circle" key={i} />);
       }
     }
-    // <CircleFill className="circle-fill" />,
-    // <CircleFill className="circle-fill" />,
-    // <CircleFill className="circle-fill" />,
     return arrayOfCircles;
   };
 
