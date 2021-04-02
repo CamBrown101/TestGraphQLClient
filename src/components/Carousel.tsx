@@ -6,10 +6,9 @@ import { CircleFill } from '@styled-icons/bootstrap/CircleFill';
 type Props = {
   interval: number;
   numberOfSlides: number;
-  backgroundColor: string;
 };
 
-const Carousel = ({ interval, numberOfSlides, backgroundColor }: Props) => {
+const Carousel = ({ interval, numberOfSlides }: Props) => {
   const [slide, setSlide] = useState(0);
   console.log(slide);
 
@@ -59,6 +58,8 @@ const Buttons = styled.button<ButtonsProps>`
 `;
 
 const CarouselContainer = styled.div`
+  width: 100%;
+
   .circle {
     width: 20px;
   }
