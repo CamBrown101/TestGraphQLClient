@@ -88,6 +88,7 @@ const CarouselContainer = styled.div`
 
   .circle {
     width: 20px;
+    color: limegreen;
   }
   .circle-fill {
     width: 20px;
