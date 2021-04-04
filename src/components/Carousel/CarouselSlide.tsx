@@ -25,10 +25,10 @@ const CarouselSlide = ({ color, slide, numberOfSlides }: Props) => {
 
   return (
     <SlideWrapper color={color}>
-      <div className="slideBackground">
-        <div className="circle-container">
-          <p>{slide}</p>
-        </div>
+      <div className="circle-container">
+        <CurrentSlide className="current-slide">{slide}</CurrentSlide>
+      </div>
+      <div className="circle-container">
         {createCircles(numberOfSlides, slide)}
       </div>
     </SlideWrapper>
@@ -47,7 +47,10 @@ const SlideWrapper = styled.div<SlideProps>`
   }};
   height: 300px;
   width: 100%;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 5%;
   .circle {
     width: 20px;
     color: limegreen;
@@ -60,6 +63,11 @@ const SlideWrapper = styled.div<SlideProps>`
     margin-bottom: 5px;
     justify-content: center;
   }
+`;
+
+const CurrentSlide = styled.p`
+  font-size: 50px;
+  margin: 0;
 `;
 
 export default CarouselSlide;
