@@ -1,13 +1,21 @@
 import React from 'react';
 import './App.scss';
+import {
+  Redirect,
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from 'react-router-dom';
 
-import Carasouel from './components/Carousel/Carousel';
+import Carousel from './components/Carousel/Carousel';
 
 function App() {
   return (
-    <div className="App">
-      <Carasouel interval={5000} numberOfSlides={5} />
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Carousel} />
+      </Switch>
+    </Router>
   );
 }
 
