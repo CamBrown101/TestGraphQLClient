@@ -1,5 +1,5 @@
 import React from 'react';
 
-export const Header = () => {
+default export const NavBar = () => {
   return <div></div>;
 };
