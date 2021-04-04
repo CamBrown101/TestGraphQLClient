@@ -47,6 +47,19 @@ const SlideWrapper = styled.div<SlideProps>`
   }};
   height: 300px;
   width: 100%;
+
+  .circle {
+    width: 20px;
+    color: limegreen;
+  }
+  .circle-fill {
+    width: 20px;
+  }
+  .circle-container {
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: center;
+  }
 `;
 
 export default CarouselSlide;
