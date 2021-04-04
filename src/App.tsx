@@ -13,7 +13,11 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/" exact component={Carousel} />
+        <Route
+          path="/"
+          exact
+          component={() => <Carousel interval={3000} numberOfSlides={5} />}
+        />
       </Switch>
     </Router>
   );
