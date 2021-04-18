@@ -23,7 +23,6 @@ export default HomePage;
 
 const AboutHeader = styled.section`
   @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;900&display=swap");
-
   background-color: black;
   font-family: "Work Sans", sans-serif;
   max-width: 100%;
@@ -42,6 +41,7 @@ const AboutHeader = styled.section`
   .about-content {
     font-size: 24px;
     line-height: 32px;
+    font-weight: 500;
     margin-top: 0;
   }
 `;
@@ -58,7 +58,7 @@ const Button = styled.button`
   background-color: #b09a7f;
   padding-top: 12px;
   padding: 9px 15px;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
