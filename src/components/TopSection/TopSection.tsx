@@ -22,7 +22,7 @@ const HomePage = () => {
 export default HomePage;
 
 const AboutHeader = styled.section`
-  @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;900&display=swap");
+  /* @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;900&display=swap"); */
   background-color: black;
   font-family: "Work Sans", sans-serif;
   max-width: 100%;

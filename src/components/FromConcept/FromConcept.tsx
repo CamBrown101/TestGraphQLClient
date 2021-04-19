@@ -54,7 +54,7 @@ const FromConcept = () => {
 export default FromConcept;
 
 const FromBrandContainer = styled.section`
-  @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;900&display=swap");
+  /* @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;900&display=swap"); */
   font-family: "Work Sans", sans-serif;
   background-color: #fff;
   margin-right: auto;
