@@ -18,5 +18,5 @@ function App() {
 export default App;
 
 const Wrapper = styled.div`
-  @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;900&display=swap");
+  /* @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;900&display=swap"); */
 `;
