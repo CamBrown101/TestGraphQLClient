@@ -5,18 +5,14 @@ import LandingPage from "./components/LandingPage/LandingPage";
 
 function App() {
   return (
-    <Wrapper>
-      <Router>
-        <Switch>
-          <Route path="/" exact component={LandingPage} />
-        </Switch>
-      </Router>
-    </Wrapper>
+    <Router>
+      <Switch>
+        <Route path="/" exact component={LandingPage} />
+        <Route path="/" exact component={LandingPage} />
+        <Route path="/" exact component={LandingPage} />
+      </Switch>
+    </Router>
   );
 }
 
 export default App;
-
-const Wrapper = styled.div`
-  /* @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;900&display=swap"); */
-`;
