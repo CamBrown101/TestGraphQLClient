@@ -41,9 +41,7 @@ type SlideProps = {
 };
 
 const SlideWrapper = styled.div<SlideProps>`
-  background-color: ${(props) => {
-    return props.color;
-  }};
+  background-color: white;
   height: 300px;
   width: 100%;
   display: flex;
@@ -69,4 +67,4 @@ const CurrentSlide = styled.p`
   margin: 0;
 `;
 
-export default CarouselSlide;
+export default People;

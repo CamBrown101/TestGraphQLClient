@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import CarouselSlide from './CarouselSlide';
-import styled from 'styled-components';
+import React, { useState, useEffect } from "react";
+import CarouselSlide from "./CarouselSlide";
+import People from "./PeopleSlides/People";
+import styled from "styled-components";
 
 type Props = {
   interval: number;
@@ -9,7 +10,6 @@ type Props = {
 
 const Carousel = ({ interval, numberOfSlides }: Props) => {
   const [slide, setSlide] = useState(1);
-  console.log(slide);
 
   const nextSlide = () => {
     if (slide + 1 === numberOfSlides + 1) {
@@ -35,11 +35,7 @@ const Carousel = ({ interval, numberOfSlides }: Props) => {
   });
 
   const slidesArray = [
-    <CarouselSlide
-      numberOfSlides={numberOfSlides}
-      slide={slide}
-      color="pink"
-    />,
+    <People numberOfSlides={numberOfSlides} slide={slide} />,
     <CarouselSlide numberOfSlides={numberOfSlides} slide={slide} color="red" />,
     <CarouselSlide
       numberOfSlides={numberOfSlides}
@@ -78,7 +74,7 @@ type ButtonsProps = {
 const Buttons = styled.button<ButtonsProps>`
   color: red;
   background-color: ${(props) =>
-    props.primary === 'white' ? 'white' : 'black'};
+    props.primary === "white" ? "white" : "black"};
 `;
 
 const CarouselContainer = styled.div`
