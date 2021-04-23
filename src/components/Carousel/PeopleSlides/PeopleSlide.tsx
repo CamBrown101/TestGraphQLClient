@@ -47,7 +47,6 @@ const SlideWrapper = styled.div<SlideProps>`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 5%;
   .circle {
     width: 20px;
     color: limegreen;
