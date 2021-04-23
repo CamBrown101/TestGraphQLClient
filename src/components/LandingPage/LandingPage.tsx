@@ -2,15 +2,21 @@ import React from "react";
 import TopSection from "../TopSection/TopSection";
 import FromConcept from "../FromConcept/FromConcept";
 import Carousel from "../Carousel/Carousel";
+import styled from "styled-components";
 
 const LandingPage = () => {
   return (
-    <div>
+    <Wrapper>
       <TopSection />
       <FromConcept />
-      <Carousel interval={2000} numberOfSlides={4} />
-    </div>
+      <Carousel interval={999999999} numberOfSlides={4} />
+    </Wrapper>
   );
 };
+
+const Wrapper = styled.div`
+  font-family: "Work Sans", sans-serif;
+  max-width: 100%;
+`;
 
 export default LandingPage;
