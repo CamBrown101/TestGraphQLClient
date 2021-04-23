@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Circle } from '@styled-icons/bootstrap/Circle';
-import { CircleFill } from '@styled-icons/bootstrap/CircleFill';
+import React from "react";
+import styled from "styled-components";
+import { Circle } from "@styled-icons/bootstrap/Circle";
+import { CircleFill } from "@styled-icons/bootstrap/CircleFill";
 
 type Props = {
   color: string;
@@ -50,7 +50,6 @@ const SlideWrapper = styled.div<SlideProps>`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 5%;
   .circle {
     width: 20px;
     color: limegreen;
