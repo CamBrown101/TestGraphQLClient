@@ -9,7 +9,7 @@ const LandingPage = () => {
     <Wrapper>
       <TopSection />
       <FromConcept />
-      <Carousel interval={999999999} numberOfSlides={4} />
+      <Carousel interval={7000} numberOfSlides={4} />
     </Wrapper>
   );
 };
