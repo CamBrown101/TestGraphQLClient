@@ -2,6 +2,7 @@ import React from "react";
 import TopSection from "../TopSection/TopSection";
 import FromConcept from "../FromConcept/FromConcept";
 import Carousel from "../Carousel/Carousel";
+import Footer from "../Footer/Footer";
 import styled from "styled-components";
 
 const LandingPage = () => {
@@ -10,6 +11,7 @@ const LandingPage = () => {
       <TopSection />
       <FromConcept />
       <Carousel interval={7000} numberOfSlides={4} />
+      <Footer />
     </Wrapper>
   );
 };
