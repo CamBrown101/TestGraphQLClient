@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import styled from "styled-components";
 import LandingPage from "./components/LandingPage/LandingPage";
 import WhyAcclamation from "./components/WhyAcclamation/WhyAcclamation";
 import HowWeWork from "./components/HowWeWork/HowWeWork";
