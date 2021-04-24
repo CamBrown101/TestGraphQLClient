@@ -81,7 +81,7 @@ const SlideWrapper = styled.div<SlideProps>`
   }
   h2 {
     margin: 0;
-    margin-top: 60px;
+    margin-top: 80px;
     font-family: "Quentin", sans-serif;
     color: #b09a7f;
     font-size: 42px;
