@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import CarouselSlide from "./CarouselSlide";
 import People from "./PeopleSlides/PeopleSlide";
+import ShawnSoole from "./PeopleSlides/ShawnSooleSlide";
+import KristoffCoates from "./PeopleSlides/KristoffCoatesSlide";
+import ColinParks from "./PeopleSlides/ColinParksSlide";
 import styled from "styled-components";
 import { ChevronLeft } from "@styled-icons/boxicons-regular/ChevronLeft";
 import { ChevronRight } from "@styled-icons/boxicons-regular/ChevronRight";
@@ -38,22 +40,10 @@ const Carousel = ({ interval, numberOfSlides }: Props) => {
 
   const slidesArray = [
     <People numberOfSlides={numberOfSlides} slide={slide} />,
-    <CarouselSlide numberOfSlides={numberOfSlides} slide={slide} color="red" />,
-    <CarouselSlide
-      numberOfSlides={numberOfSlides}
-      slide={slide}
-      color="blue"
-    />,
-    <CarouselSlide
-      numberOfSlides={numberOfSlides}
-      slide={slide}
-      color="green"
-    />,
-    <CarouselSlide
-      numberOfSlides={numberOfSlides}
-      slide={slide}
-      color="black"
-    />,
+    <KristoffCoates numberOfSlides={numberOfSlides} slide={slide} />,
+    <ShawnSoole numberOfSlides={numberOfSlides} slide={slide} />,
+    <ColinParks numberOfSlides={numberOfSlides} slide={slide} />,
+    // <CarouselSlide numberOfSlides={numberOfSlides} slide={slide} color="red" />,
   ];
 
   return (
