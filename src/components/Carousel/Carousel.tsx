@@ -86,9 +86,10 @@ const ButtonContainer = styled.div`
 `;
 
 const Buttons = styled.button<ButtonsProps>`
-  color: black;
+  color: white;
   border: none;
   width: 80px;
+  padding: 0;
   background-color: rgba(1, 1, 1, 0);
   cursor: pointer;
 `;
