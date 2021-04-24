@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Circle } from "@styled-icons/bootstrap/Circle";
 import { CircleFill } from "@styled-icons/bootstrap/CircleFill";
 type Props = {
   slide: number;
@@ -86,6 +85,7 @@ const SlideWrapper = styled.div<SlideProps>`
     color: #b09a7f;
     font-size: 42px;
     line-height: 42px;
+    text-align: center;
   }
   .people-container {
     width: 80%;
