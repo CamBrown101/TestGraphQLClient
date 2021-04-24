@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import CarouselSlide from "./CarouselSlide";
 import People from "./PeopleSlides/PeopleSlide";
 import styled from "styled-components";
+import { ChevronLeft } from "@styled-icons/boxicons-regular/ChevronLeft";
+import { ChevronRight } from "@styled-icons/boxicons-regular/ChevronRight";
 
 type Props = {
   interval: number;
@@ -58,9 +60,11 @@ const Carousel = ({ interval, numberOfSlides }: Props) => {
     <CarouselContainer>
       {slidesArray[slide - 1]}
       <ButtonContainer>
-        <Buttons onClick={() => previousSlide()}>last</Buttons>
+        <Buttons onClick={() => previousSlide()}>
+          <ChevronLeft />
+        </Buttons>
         <Buttons primary="white" onClick={() => nextSlide()}>
-          next
+          <ChevronRight />
         </Buttons>
       </ButtonContainer>
     </CarouselContainer>
@@ -77,14 +81,16 @@ const ButtonContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   position: absolute;
-  top: 0;
+  top: 50%;
   width: 100%;
 `;
 
 const Buttons = styled.button<ButtonsProps>`
-  color: red;
-  background-color: ${(props) =>
-    props.primary === "white" ? "white" : "black"};
+  color: black;
+  border: none;
+  width: 80px;
+  background-color: rgba(1, 1, 1, 0);
+  cursor: pointer;
 `;
 
 const CarouselContainer = styled.div`
