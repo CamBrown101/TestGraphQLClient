@@ -76,7 +76,7 @@ const SlideWrapper = styled.div<SlideProps>`
     text-align: center;
     font-size: 16px;
     line-height: 21px;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
     font-family: "Work Sans", sans-serif;
   }
   h2 {
