@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import CarouselSlide from "./CarouselSlide";
 import People from "./PeopleSlides/PeopleSlide";
 import styled from "styled-components";
@@ -57,11 +57,12 @@ const Carousel = ({ interval, numberOfSlides }: Props) => {
   return (
     <CarouselContainer>
       {slidesArray[slide - 1]}
-
-      <Buttons onClick={() => previousSlide()}>last</Buttons>
-      <Buttons primary="white" onClick={() => nextSlide()}>
-        next
-      </Buttons>
+      <ButtonContainer>
+        <Buttons onClick={() => previousSlide()}>last</Buttons>
+        <Buttons primary="white" onClick={() => nextSlide()}>
+          next
+        </Buttons>
+      </ButtonContainer>
     </CarouselContainer>
   );
 };
@@ -71,6 +72,15 @@ type ButtonsProps = {
   primary?: string;
 };
 
+const ButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  width: 100%;
+`;
+
 const Buttons = styled.button<ButtonsProps>`
   color: red;
   background-color: ${(props) =>
@@ -79,6 +89,7 @@ const Buttons = styled.button<ButtonsProps>`
 
 const CarouselContainer = styled.div`
   width: 100%;
+  position: relative;
 `;
 
 export default Carousel;
