@@ -1,11 +1,16 @@
 import React from "react";
+import styled from "styled-components";
 
 const PrivacyPolicy = () => {
   return (
-    <div>
+    <PrivacyPolicyWrapper>
       <h1>PrivacyPolicy</h1>
-    </div>
+    </PrivacyPolicyWrapper>
   );
 };
 
 export default PrivacyPolicy;
+
+const PrivacyPolicyWrapper = styled.main`
+  margin-top: 70px;
+`;
