@@ -22,11 +22,15 @@ const Footer = () => {
           <p className="copyright">
             ©{date.getFullYear()} Acclamation Co. All Rights Reserved.
           </p>
-          <a href="https://forms.gle/ZaZhfMSeV9QxgnNcA">EVOLVE WITH US</a>
         </div>
         <div className="site-links">
           <Link to="/Why-Acclamation">WHY ACCLAMATION</Link>
           <Link to="/How-We-Work">HOW WE WORK</Link>
+        </div>
+        <div>
+          <h4>CONTACT US</h4>
+          <a href="https://forms.gle/ZaZhfMSeV9QxgnNcA">EVOLVE WITH US</a>
+          <Link to="/Privacy-Policy">Privacy Policy</Link>
         </div>
       </TopFooterContainer>
       <SocialContainer>
@@ -57,7 +61,6 @@ const FooterWrapper = styled.footer`
   }
   .logo {
     height: 100px;
-    margin-left: -20px;
   }
 `;
 const SocialContainer = styled.div`
@@ -93,6 +96,7 @@ const TopFooterContainer = styled.div`
       font-family: "Quentin", sans-serif;
       font-size: 25px;
       margin: 3px;
+      color: #b09a7f;
     }
     p {
       font-family: "Work Sans", sans-serif;
@@ -116,8 +120,10 @@ const TopFooterContainer = styled.div`
     display: flex;
     flex-direction: column;
     font-family: "Work Sans", sans-serif;
-    font-size: 25px;
+    font-size: 16px;
     color: #b09a7f;
     font-weight: 900;
+    margin-bottom: 10px;
+    text-transform: uppercase;
   }
 `;
