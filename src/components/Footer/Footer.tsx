@@ -61,6 +61,8 @@ const FooterWrapper = styled.footer`
   }
   .logo {
     height: 75px;
+    filter: invert(15%) sepia(6%) saturate(1341%) hue-rotate(353deg)
+      brightness(83%) contrast(84%);
   }
 `;
 const SocialContainer = styled.div`
@@ -96,7 +98,7 @@ const TopFooterContainer = styled.div`
       font-family: "Quentin", sans-serif;
       font-size: 25px;
       margin: 3px;
-      color: #b09a7f;
+      color: white;
     }
     p {
       font-family: "Work Sans", sans-serif;
