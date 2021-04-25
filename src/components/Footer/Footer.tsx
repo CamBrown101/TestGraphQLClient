@@ -27,7 +27,7 @@ const Footer = () => {
           <Link to="/Why-Acclamation">WHY ACCLAMATION</Link>
           <Link to="/How-We-Work">HOW WE WORK</Link>
         </div>
-        <div>
+        <div className="contact-us">
           <h4>CONTACT US</h4>
           <a href="https://forms.gle/ZaZhfMSeV9QxgnNcA">EVOLVE WITH US</a>
           <Link to="/Privacy-Policy">Privacy Policy</Link>
@@ -60,7 +60,7 @@ const FooterWrapper = styled.footer`
     color: inherit;
   }
   .logo {
-    height: 100px;
+    height: 75px;
   }
 `;
 const SocialContainer = styled.div`
@@ -116,14 +116,29 @@ const TopFooterContainer = styled.div`
     }
   }
 
-  .site-links {
+  .site-links,
+  .contact-us {
     display: flex;
     flex-direction: column;
     font-family: "Work Sans", sans-serif;
     font-size: 16px;
     color: #b09a7f;
     font-weight: 900;
+    margin-top: 90px;
     margin-bottom: 10px;
     text-transform: uppercase;
+  }
+  .site-links {
+    text-align: center;
+  }
+  .contact-us {
+    text-align: right;
+    margin-right: 2%;
+    h4 {
+      margin: 0;
+    }
+    a {
+      color: white;
+    }
   }
 `;
