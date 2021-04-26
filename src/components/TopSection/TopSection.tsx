@@ -22,13 +22,14 @@ const HomePage = () => {
 export default HomePage;
 
 const AboutHeader = styled.section`
-  /* @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;900&display=swap"); */
   background-color: black;
   max-width: 100%;
   width: 100%;
   color: #fff;
   height: 675px;
-  padding-top: 69px;
+  padding-top: 120px;
+  display: flex;
+  justify-content: center;
   .about-header {
     margin-top: 0;
     margin-bottom: 20px;
@@ -47,6 +48,7 @@ const AboutHeader = styled.section`
 const AboutContainer = styled.div`
   width: 90%;
   margin-left: 2%;
+  max-width: 1400px;
 `;
 const Button = styled.button`
   margin-bottom: 20px;
