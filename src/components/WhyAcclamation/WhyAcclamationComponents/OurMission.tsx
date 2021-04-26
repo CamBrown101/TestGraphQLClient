@@ -33,6 +33,9 @@ const OurMission = () => {
             </p>
           </article>
         </ArticleContainer>
+        <a href="https://forms.gle/ZaZhfMSeV9QxgnNcA">
+          <Button>EVOLVE WITH US</Button>
+        </a>
       </OurMissionInnerContainer>
     </OurMissionContainer>
   );
@@ -101,4 +104,22 @@ const ArticleContainer = styled.div`
     color: black;
     font-weight: 700;
   }
+`;
+
+const Button = styled.button`
+  margin-bottom: 20px;
+  margin-top: 50px;
+  font-size: 20px;
+  line-height: 32px;
+  color: #fff;
+  background-color: #b09a7f;
+  padding-top: 12px;
+  padding: 9px 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 0;
+  font-family: "Work Sans", sans-serif;
+  width: 220px;
 `;
