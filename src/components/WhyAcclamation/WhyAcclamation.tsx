@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import WhyHeader from "./WhyAcclamationComponents/WhyHeader";
+import Footer from "../Footer/Footer";
 
 const WhyAcclamation = () => {
   return (
     <WhyAcclamationWrapper>
-      <h1>Why Acclamation</h1>
+      <WhyHeader />
+      <Footer />
     </WhyAcclamationWrapper>
   );
 };
@@ -12,7 +15,6 @@ const WhyAcclamation = () => {
 export default WhyAcclamation;
 
 const WhyAcclamationWrapper = styled.main`
-  margin-top: 120px;
   h1 {
     margin: 0;
   }
