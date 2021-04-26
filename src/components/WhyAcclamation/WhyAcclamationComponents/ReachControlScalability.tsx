@@ -57,7 +57,6 @@ const FromConcept = () => {
             <li>Convert social media followers and newsletter subscribers</li>
           </Lists>
         </ListContainer>
-        <Button>How We Work</Button>
       </FromBrandInnerContainer>
     </FromBrandContainer>
   );
@@ -125,22 +124,4 @@ const Lists = styled.ul`
 const ListContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
-`;
-
-const Button = styled.button`
-  margin-bottom: 20px;
-  margin-top: 30px;
-  font-size: 20px;
-  line-height: 32px;
-  color: #fff;
-  background-color: #b09a7f;
-  padding-top: 12px;
-  padding: 9px 15px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  cursor: pointer;
-  border: 0;
-  font-family: "Work Sans", sans-serif;
-  width: 200px;
 `;
