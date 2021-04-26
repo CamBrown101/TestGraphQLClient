@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import WhyHeader from "./WhyAcclamationComponents/WhyHeader";
 import ReachControlStability from "./WhyAcclamationComponents/ReachControlScalability";
+import OurMission from "./WhyAcclamationComponents/OurMission";
 import Footer from "../Footer/Footer";
 
 const WhyAcclamation = () => {
@@ -9,6 +10,7 @@ const WhyAcclamation = () => {
     <WhyAcclamationWrapper>
       <WhyHeader />
       <ReachControlStability />
+      <OurMission />
       <Footer />
     </WhyAcclamationWrapper>
   );
