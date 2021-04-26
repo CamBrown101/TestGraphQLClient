@@ -48,15 +48,17 @@ const Carousel = ({ interval, numberOfSlides }: Props) => {
 
   return (
     <CarouselContainer>
-      {slidesArray[slide - 1]}
-      <ButtonContainer>
-        <Buttons onClick={() => previousSlide()}>
-          <ChevronLeft />
-        </Buttons>
-        <Buttons primary="white" onClick={() => nextSlide()}>
-          <ChevronRight />
-        </Buttons>
-      </ButtonContainer>
+      <CarouselContainerInner>
+        {slidesArray[slide - 1]}
+        <ButtonContainer>
+          <Buttons onClick={() => previousSlide()}>
+            <ChevronLeft />
+          </Buttons>
+          <Buttons primary="white" onClick={() => nextSlide()}>
+            <ChevronRight />
+          </Buttons>
+        </ButtonContainer>
+      </CarouselContainerInner>
     </CarouselContainer>
   );
 };
@@ -85,7 +87,14 @@ const Buttons = styled.button<ButtonsProps>`
 `;
 
 const CarouselContainer = styled.div`
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+`;
+
+const CarouselContainerInner = styled.div`
+  width: 90%;
+  max-width: 1400px;
   position: relative;
 `;
 
