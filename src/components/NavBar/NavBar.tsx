@@ -17,7 +17,7 @@ const NavBar = () => {
               id="nav-menu-why-acclamation"
               exact
               to="/Why-Acclamation">
-              How We Work
+              Why Acclamation
             </NavLink>
             <NavLink
               className="nav-menu-item"
