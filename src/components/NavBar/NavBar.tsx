@@ -5,40 +5,49 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <NavBarWrapper>
-      <NavLink className="nav-menu-item" id="nav-menu-home" exact to="/">
-        <img className="logo" alt="Acclamation Logo" src={Logo}></img>
-      </NavLink>
-      <div className="nav-inner-container">
-        <div className="nav-btns">
+    <NavBarContainer>
+      <NavBarWrapper>
+        <NavLink className="nav-menu-item" id="nav-menu-home" exact to="/">
+          <img className="logo" alt="Acclamation Logo" src={Logo}></img>
+        </NavLink>
+        <div className="nav-inner-container">
+          <div className="nav-btns">
+            <NavLink
+              className="nav-menu-item"
+              id="nav-menu-why-acclamation"
+              exact
+              to="/Why-Acclamation">
+              How We Work
+            </NavLink>
+            <NavLink
+              className="nav-menu-item"
+              id="nav-menu-how-we-work"
+              exact
+              to="/How-We-Work">
+              How We Work
+            </NavLink>
+          </div>
           <NavLink
             className="nav-menu-item"
-            id="nav-menu-why-acclamation"
+            id="nav-menu-evolve-with-us"
             exact
-            to="/Why-Acclamation">
-            How We Work
-          </NavLink>
-          <NavLink
-            className="nav-menu-item"
-            id="nav-menu-how-we-work"
-            exact
-            to="/How-We-Work">
-            How We Work
+            to="https://forms.gle/ZaZhfMSeV9QxgnNcA">
+            Evolve With Us
           </NavLink>
         </div>
-        <NavLink
-          className="nav-menu-item"
-          id="nav-menu-evolve-with-us"
-          exact
-          to="https://forms.gle/ZaZhfMSeV9QxgnNcA">
-          Evolve With Us
-        </NavLink>
-      </div>
-    </NavBarWrapper>
+      </NavBarWrapper>
+    </NavBarContainer>
   );
 };
 
 export default NavBar;
+
+const NavBarContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  width: 100%;
+`;
 
 const NavBarWrapper = styled.nav`
   position: fixed;
@@ -46,6 +55,7 @@ const NavBarWrapper = styled.nav`
   display: flex;
   align-items: center;
   width: 100%;
+  max-width: 1400px;
   padding: 15px 2% 10px;
   background-color: black;
   border-bottom: 1px solid #463c30;
