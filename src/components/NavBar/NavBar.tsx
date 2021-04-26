@@ -60,6 +60,7 @@ const NavBarWrapper = styled.nav`
   background-color: black;
   border-bottom: 1px solid #463c30;
   color: white;
+  width: 90%;
 
   .logo {
     height: 70px;

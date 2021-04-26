@@ -47,7 +47,6 @@ const AboutHeader = styled.section`
 `;
 const AboutContainer = styled.div`
   width: 90%;
-  margin-left: 2%;
   max-width: 1400px;
 `;
 const Button = styled.button`
