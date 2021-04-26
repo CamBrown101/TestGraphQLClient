@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import backgroundImage from "../../images/Header-eddited.png";
+
+const computerBottleImg = backgroundImage;
 
 const HomePage = () => {
   return (
-    <AboutHeader>
-      <AboutContainer>
+    <AboutContainer>
+      <AboutContainerInner>
         <h2 className="about-header">
           THE CONNECTION BETWEEN YOUR F&B BUSINESS AND YOUR IDEAL CUSTOMER
         </h2>
@@ -15,13 +18,13 @@ const HomePage = () => {
           online footprint to social media engagement.
         </p>
         <Button>WHY ACCLAMATION</Button>
-      </AboutContainer>
-    </AboutHeader>
+      </AboutContainerInner>
+    </AboutContainer>
   );
 };
 export default HomePage;
 
-const AboutHeader = styled.section`
+const AboutContainer = styled.header`
   background-color: black;
   max-width: 100%;
   width: 100%;
@@ -30,8 +33,9 @@ const AboutHeader = styled.section`
   padding-top: 120px;
   display: flex;
   justify-content: center;
+  align-items: center;
   .about-header {
-    margin-top: 0;
+    width: 50%;
     margin-bottom: 20px;
     font-weight: 900;
     text-transform: uppercase;
@@ -39,15 +43,24 @@ const AboutHeader = styled.section`
     line-height: 44px;
   }
   .about-content {
+    width: 50%;
     font-size: 24px;
     line-height: 32px;
     font-weight: 500;
-    margin-top: 0;
   }
 `;
-const AboutContainer = styled.div`
+const AboutContainerInner = styled.div`
+  background-image: url(${computerBottleImg});
+  background-repeat: no-repeat;
+  background-size: 600px;
+  background-position-x: right;
+  background-position-y: center;
   width: 90%;
+  height: 100%;
   max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 const Button = styled.button`
   margin-bottom: 20px;
@@ -64,4 +77,5 @@ const Button = styled.button`
   cursor: pointer;
   border: 0;
   font-family: "Work Sans", sans-serif;
+  width: 283px;
 `;
