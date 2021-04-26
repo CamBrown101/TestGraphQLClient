@@ -19,7 +19,6 @@ const LandingPage = () => {
 const Wrapper = styled.div`
   font-family: "Work Sans", sans-serif;
   max-width: 100%;
-  margin-top: 70px;
 `;
 
 export default LandingPage;
