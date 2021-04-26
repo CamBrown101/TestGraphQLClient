@@ -47,11 +47,11 @@ const NavBarContainer = styled.div`
   justify-content: center;
   background-color: black;
   width: 100%;
+  top: 0;
+  position: fixed;
 `;
 
 const NavBarWrapper = styled.nav`
-  position: fixed;
-  top: 0;
   display: flex;
   align-items: center;
   width: 100%;
