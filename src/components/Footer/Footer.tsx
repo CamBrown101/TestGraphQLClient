@@ -7,49 +7,59 @@ const date = new Date();
 
 const Footer = () => {
   return (
-    <FooterWrapper>
-      <TopFooterContainer>
-        <div className="contact">
-          <img className="logo" alt="Acclamation Logo" src={Logo} />
-          <h3>Please drink responsibly</h3>
-          <p>Acclamation Co.</p>
-          <a className="email" href="mailto:email@Acclamation.com">
-            email@Acclamation.com
-          </a>
-          <a className="phone" href="tel:+1-250-884-3116">
-            Phone Number - 250 884 3116
-          </a>
-          <p className="copyright">
-            ©{date.getFullYear()} Acclamation Co. All Rights Reserved.
-          </p>
-        </div>
-        <div className="site-links">
-          <Link to="/Why-Acclamation">WHY ACCLAMATION</Link>
-          <Link to="/How-We-Work">HOW WE WORK</Link>
-        </div>
-        <div className="contact-us">
-          <h4>CONTACT US</h4>
-          <a href="https://forms.gle/ZaZhfMSeV9QxgnNcA">EVOLVE WITH US</a>
-          <Link to="/Privacy-Policy">Privacy Policy</Link>
-        </div>
-      </TopFooterContainer>
-      <SocialContainer>
-        <div className="social-links">
-          <SocialIcons>{/* <a></a> */}</SocialIcons>
-          <SocialIcons>{/* <a></a> */}</SocialIcons>
-          <SocialIcons>{/* <a></a> */}</SocialIcons>
-          <SocialIcons>{/* <a></a> */}</SocialIcons>
-        </div>
-      </SocialContainer>
-    </FooterWrapper>
+    <FooterContainer>
+      <FooterWrapper>
+        <TopFooterContainer>
+          <div className="contact">
+            <img className="logo" alt="Acclamation Logo" src={Logo} />
+            <h3>Please drink responsibly</h3>
+            <p>Acclamation Co.</p>
+            <a className="email" href="mailto:email@Acclamation.com">
+              email@Acclamation.com
+            </a>
+            <a className="phone" href="tel:+1-250-884-3116">
+              Phone Number - 250 884 3116
+            </a>
+            <p className="copyright">
+              ©{date.getFullYear()} Acclamation Co. All Rights Reserved.
+            </p>
+          </div>
+          <div className="site-links">
+            <Link to="/Why-Acclamation">WHY ACCLAMATION</Link>
+            <Link to="/How-We-Work">HOW WE WORK</Link>
+          </div>
+          <div className="contact-us">
+            <h4>CONTACT US</h4>
+            <a href="https://forms.gle/ZaZhfMSeV9QxgnNcA">EVOLVE WITH US</a>
+            <Link to="/Privacy-Policy">Privacy Policy</Link>
+          </div>
+        </TopFooterContainer>
+        <SocialContainer>
+          <div className="social-links">
+            <SocialIcons>{/* <a></a> */}</SocialIcons>
+            <SocialIcons>{/* <a></a> */}</SocialIcons>
+            <SocialIcons>{/* <a></a> */}</SocialIcons>
+            <SocialIcons>{/* <a></a> */}</SocialIcons>
+          </div>
+        </SocialContainer>
+      </FooterWrapper>
+    </FooterContainer>
   );
 };
 export default Footer;
 
-const FooterWrapper = styled.footer`
+const FooterContainer = styled.footer`
+  background-color: black;
+  display: flex;
+  justify-content: center;
+`;
+
+const FooterWrapper = styled.div`
   padding-top: 70px;
   padding-bottom: 70px;
-  background-color: #000;
+  width: 90%;
+  max-width: 1400px;
+  background-color: black;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   a,
