@@ -72,6 +72,9 @@ const FromBrandContainer = styled.section`
 const FromBrandInnerContainer = styled.div`
   max-width: 1400px;
   width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Titles = styled.div`
