@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import backgroundImage from "../../../../images/Header-eddited.png";
+import backgroundImage from "../../../../images/WebsiteHEader.png";
 
 const computerBottleImg = backgroundImage;
 
