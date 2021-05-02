@@ -7,6 +7,7 @@ type Props = {
   numberOfSlides: number;
   header: string;
   description: string;
+  title?: string;
 };
 
 const createCircles = (totalSlides: number, slideNumber: number) => {
@@ -22,11 +23,20 @@ const createCircles = (totalSlides: number, slideNumber: number) => {
   return arrayOfCircles;
 };
 
-const People = ({ slide, numberOfSlides, header, description }: Props) => {
+const People = ({
+  slide,
+  numberOfSlides,
+  header,
+  description,
+  title,
+}: Props) => {
   return (
     <SlideWrapper>
       <div className="slide-container">
-        <h2>{header}</h2>
+        <h2>
+          {header}
+          {title && ` - ${title}`}
+        </h2>
         <p>{description}</p>
         <CircleContainer>
           {createCircles(numberOfSlides, slide)}
