@@ -4,7 +4,7 @@ import { ChevronLeft } from "@styled-icons/boxicons-regular/ChevronLeft";
 import { ChevronRight } from "@styled-icons/boxicons-regular/ChevronRight";
 
 type Props = {
-  direction: string;
+  direction?: string;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 };
 
