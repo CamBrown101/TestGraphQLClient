@@ -14,7 +14,7 @@ const People = ({ slide, numberOfSlides, header, description }: Props) => {
 
     for (let i = 1; i <= totalSlides; i++) {
       if (i === slideNumber) {
-        arrayOfCircles.push(<CircleFill className="circle-current" key={i} />);
+        arrayOfCircles.push(<CircleFill className="circle current" key={i} />);
       } else {
         arrayOfCircles.push(<CircleFill className="circle" key={i} />);
       }
@@ -89,10 +89,8 @@ const CircleContainer = styled.div`
     color: grey;
     margin-right: 10px;
   }
-  .circle-current {
-    width: 10px;
+  .current {
     color: white;
-    margin-right: 10px;
   }
 `;
 export default People;
