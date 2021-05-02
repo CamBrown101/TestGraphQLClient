@@ -43,10 +43,9 @@ type SlideProps = {
 
 const SlideWrapper = styled.div<SlideProps>`
   display: flex;
-  justify-content: space-between;
-  /* justify-content: center; */
-  align-items: center;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   height: 600px;
   width: 100%;
   color: white;
@@ -71,17 +70,19 @@ const SlideWrapper = styled.div<SlideProps>`
   .people-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 80%;
     height: 100%;
   }
 `;
+
 const CircleContainer = styled.div`
   display: flex;
   flex-direction: initial;
   justify-content: center;
   margin-bottom: 20px;
+
   .circle {
     width: 10px;
     color: grey;
