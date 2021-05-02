@@ -14,19 +14,19 @@ type Props = {
 };
 
 const Carousel = ({ interval, numberOfSlides }: Props) => {
-  const [slide, setSlide] = useState(1);
+  const [slide, setSlide] = useState(0);
 
   const nextSlide = () => {
-    if (slide + 1 === numberOfSlides + 1) {
-      setSlide(1);
+    if (slide + 1 === numberOfSlides) {
+      setSlide(0);
     } else {
       setSlide(slide + 1);
     }
   };
 
   const previousSlide = () => {
-    if (slide - 1 === 0) {
-      setSlide(numberOfSlides);
+    if (slide === 0) {
+      setSlide(numberOfSlides - 1);
     } else {
       setSlide(slide - 1);
     }
@@ -39,7 +39,7 @@ const Carousel = ({ interval, numberOfSlides }: Props) => {
     return () => clearTimeout(timer);
   });
 
-  const SlideData = [
+  const slideData = [
     {
       header: "People",
       description:
@@ -62,43 +62,50 @@ const Carousel = ({ interval, numberOfSlides }: Props) => {
     },
   ];
 
-  const slidesArray = [
-    <SlideTemplate
-      slide={1}
-      numberOfSlides={4}
-      header={SlideData[0].header}
-      description={SlideData[0].description}
-    />,
-    <SlideTemplate
-      slide={1}
-      numberOfSlides={4}
-      header={SlideData[1].header}
-      description={SlideData[1].description}
-    />,
-    <SlideTemplate
-      slide={1}
-      numberOfSlides={4}
-      header={SlideData[2].header}
-      description={SlideData[2].description}
-    />,
-    <SlideTemplate
-      slide={1}
-      numberOfSlides={4}
-      header={SlideData[3].header}
-      description={SlideData[3].description}
-    />,
+  const slidesArray = slideData.map((slide, index) => {
+    return (
+      <SlideTemplate
+        key={index}
+        numberOfSlides={slideData.length}
+        slide={index}
+        header={slide.header}
+        description={slide.description}
+      />
+    );
+  });
 
-    // <People numberOfSlides={numberOfSlides} slide={slide} />,
-    // <KristoffCoates numberOfSlides={numberOfSlides} slide={slide} />,
-    // <ShawnSoole numberOfSlides={numberOfSlides} slide={slide} />,
-    // <ColinParks numberOfSlides={numberOfSlides} slide={slide} />,
-    // <CarouselSlide numberOfSlides={numberOfSlides} slide={slide} color="red" />,
-  ];
+  console.log(slidesArray);
+  // const slidesArray = [
+  //   <SlideTemplate
+  //     slide={1}
+  //     numberOfSlides={4}
+  //     header={SlideData[0].header}
+  //     description={SlideData[0].description}
+  //   />,
+  //   <SlideTemplate
+  //     slide={1}
+  //     numberOfSlides={4}
+  //     header={SlideData[1].header}
+  //     description={SlideData[1].description}
+  //   />,
+  //   <SlideTemplate
+  //     slide={1}
+  //     numberOfSlides={4}
+  //     header={SlideData[2].header}
+  //     description={SlideData[2].description}
+  //   />,
+  //   <SlideTemplate
+  //     slide={1}
+  //     numberOfSlides={4}
+  //     header={SlideData[3].header}
+  //     description={SlideData[3].description}
+  //   />,
+  // ];
 
   return (
     <CarouselContainer>
       <CarouselContainerInner>
-        {slidesArray[slide - 1]}
+        {slidesArray[slide]}
         <ButtonContainer>
           <Buttons onClick={() => previousSlide()}>
             <ChevronLeft />
