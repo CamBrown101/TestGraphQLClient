@@ -12,7 +12,7 @@ const People = ({ slide, numberOfSlides, header, description }: Props) => {
   const createCircles = (totalSlides: number, slideNumber: number) => {
     const arrayOfCircles: any[] = [];
 
-    for (let i = 1; i <= totalSlides; i++) {
+    for (let i = 0; i < totalSlides; i++) {
       if (i === slideNumber) {
         arrayOfCircles.push(<CircleFill className="circle current" key={i} />);
       } else {
