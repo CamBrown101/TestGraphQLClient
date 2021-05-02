@@ -42,24 +42,22 @@ type SlideProps = {
 };
 
 const SlideWrapper = styled.div<SlideProps>`
-  background-color: black;
-  color: white;
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
   height: 600px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  display: flex;
-  align-items: center;
-  justify-content: center p {
-    text-align: center;
-  }
+  color: white;
+  background-color: black;
+
   p {
-    text-align: center;
+    font-family: "Work Sans", sans-serif;
     font-size: 16px;
     line-height: 21px;
+    text-align: center;
     margin-bottom: 80px;
-    font-family: "Work Sans", sans-serif;
   }
   h2 {
     margin: 0;
@@ -71,19 +69,19 @@ const SlideWrapper = styled.div<SlideProps>`
     text-align: center;
   }
   .people-container {
-    width: 80%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 100%;
   }
 `;
 const CircleContainer = styled.div`
   display: flex;
   flex-direction: initial;
-  margin-bottom: 20px;
   justify-content: center;
+  margin-bottom: 20px;
   .circle {
     width: 10px;
     color: grey;
