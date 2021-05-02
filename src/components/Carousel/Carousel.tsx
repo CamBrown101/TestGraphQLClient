@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SlideTemplate from "./PeopleSlides/SlideTemplate";
+import CarouselButton from "./CarouselButton";
 import styled from "styled-components";
 import { ChevronLeft } from "@styled-icons/boxicons-regular/ChevronLeft";
 import { ChevronRight } from "@styled-icons/boxicons-regular/ChevronRight";
@@ -78,12 +79,8 @@ const Carousel = ({ interval, numberOfSlides }: Props) => {
       <CarouselContainerInner>
         {slidesArray[slide]}
         <ButtonContainer>
-          <Button onClick={() => previousSlide()}>
-            <ChevronLeft />
-          </Button>
-          <Button onClick={() => nextSlide()}>
-            <ChevronRight />
-          </Button>
+          <CarouselButton direction="previous" onClick={previousSlide} />
+          <CarouselButton direction="next" onClick={nextSlide} />
         </ButtonContainer>
       </CarouselContainerInner>
     </CarouselContainer>
@@ -99,15 +96,6 @@ const ButtonContainer = styled.div`
   position: absolute;
   top: 50%;
   width: 100%;
-`;
-
-const Button = styled.button`
-  color: white;
-  border: none;
-  width: 80px;
-  padding: 0;
-  background-color: rgba(1, 1, 1, 0);
-  cursor: pointer;
 `;
 
 const CarouselContainer = styled.div`
