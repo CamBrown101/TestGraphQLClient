@@ -48,6 +48,8 @@ const slidesArray = slideData.map((slide, index) => {
 });
 
 const Carousel = ({ interval, numberOfSlides }: Props) => {
+  const [slide, setSlide] = useState(0);
+
   const nextSlide = () => {
     if (slide + 1 === numberOfSlides) {
       setSlide(0);
@@ -63,7 +65,6 @@ const Carousel = ({ interval, numberOfSlides }: Props) => {
       setSlide(slide - 1);
     }
   };
-  const [slide, setSlide] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => {
