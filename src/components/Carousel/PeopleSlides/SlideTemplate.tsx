@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { CircleFill } from "@styled-icons/bootstrap/CircleFill";
+
 type Props = {
   slide: number;
   numberOfSlides: number;
@@ -37,11 +38,7 @@ const People = ({ slide, numberOfSlides, header, description }: Props) => {
 
 //Styled Component
 
-type SlideProps = {
-  color?: string;
-};
-
-const SlideWrapper = styled.div<SlideProps>`
+const SlideWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
