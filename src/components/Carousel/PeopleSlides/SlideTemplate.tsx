@@ -9,23 +9,23 @@ type Props = {
   description: string;
 };
 
-const People = ({ slide, numberOfSlides, header, description }: Props) => {
-  const createCircles = (totalSlides: number, slideNumber: number) => {
-    const arrayOfCircles: any[] = [];
+const createCircles = (totalSlides: number, slideNumber: number) => {
+  const arrayOfCircles: any[] = [];
 
-    for (let i = 0; i < totalSlides; i++) {
-      if (i === slideNumber) {
-        arrayOfCircles.push(<CircleFill className="circle current" key={i} />);
-      } else {
-        arrayOfCircles.push(<CircleFill className="circle" key={i} />);
-      }
+  for (let i = 0; i < totalSlides; i++) {
+    if (i === slideNumber) {
+      arrayOfCircles.push(<CircleFill className="circle current" key={i} />);
+    } else {
+      arrayOfCircles.push(<CircleFill className="circle" key={i} />);
     }
-    return arrayOfCircles;
-  };
+  }
+  return arrayOfCircles;
+};
 
+const People = ({ slide, numberOfSlides, header, description }: Props) => {
   return (
     <SlideWrapper>
-      <div className="people-container">
+      <div className="slide-container">
         <h2>{header}</h2>
         <p>{description}</p>
         <CircleContainer>
@@ -64,7 +64,7 @@ const SlideWrapper = styled.div`
     line-height: 42px;
     text-align: center;
   }
-  .people-container {
+  .slide-container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
