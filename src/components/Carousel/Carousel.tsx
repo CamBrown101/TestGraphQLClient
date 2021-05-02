@@ -1,8 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import People from "./PeopleSlides/PeopleSlide";
-// import ShawnSoole from "./PeopleSlides/ShawnSooleSlide";
-// import KristoffCoates from "./PeopleSlides/KristoffCoatesSlide";
-// import ColinParks from "./PeopleSlides/ColinParksSlide";
 import SlideTemplate from "./PeopleSlides/SlideTemplate";
 import styled from "styled-components";
 import { ChevronLeft } from "@styled-icons/boxicons-regular/ChevronLeft";
@@ -73,34 +69,6 @@ const Carousel = ({ interval, numberOfSlides }: Props) => {
       />
     );
   });
-
-  console.log(slidesArray);
-  // const slidesArray = [
-  //   <SlideTemplate
-  //     slide={1}
-  //     numberOfSlides={4}
-  //     header={SlideData[0].header}
-  //     description={SlideData[0].description}
-  //   />,
-  //   <SlideTemplate
-  //     slide={1}
-  //     numberOfSlides={4}
-  //     header={SlideData[1].header}
-  //     description={SlideData[1].description}
-  //   />,
-  //   <SlideTemplate
-  //     slide={1}
-  //     numberOfSlides={4}
-  //     header={SlideData[2].header}
-  //     description={SlideData[2].description}
-  //   />,
-  //   <SlideTemplate
-  //     slide={1}
-  //     numberOfSlides={4}
-  //     header={SlideData[3].header}
-  //     description={SlideData[3].description}
-  //   />,
-  // ];
 
   return (
     <CarouselContainer>
