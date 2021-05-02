@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import SlideTemplate from "./PeopleSlides/SlideTemplate";
 import CarouselButton from "./CarouselButton";
 import styled from "styled-components";
-import { ChevronLeft } from "@styled-icons/boxicons-regular/ChevronLeft";
-import { ChevronRight } from "@styled-icons/boxicons-regular/ChevronRight";
 
 type Props = {
   interval: number;
